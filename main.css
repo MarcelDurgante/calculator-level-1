@@ -79,8 +79,23 @@
     }
     
     .switch--dark {
+        height: 1rem;
+        width: 2rem;
         margin-right: 1rem;
-        background-color: red;
+        border-radius: 1rem;
+        background-color: var(--displays__inner-content--dark-mode);
+    }
+    
+    .label {
+        margin-right: 0;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        background-color: var(--displays__bg--light-mode)
+    }
+    
+    .checkbox {
+        display: none;
     }
     
     .control__right {}
@@ -127,8 +142,6 @@
     }
     
     .key__operators--clear {}
-    
-    .key__operators--darkmode {}
     
     .key__operators--remainder {}
     
