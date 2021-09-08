@@ -26,8 +26,28 @@ numbers.forEach((number) => {
     });
 });
 
+operators.forEach((operator) => {
+    operator.addEventListener('click', () => {
+        displayMax.textContent += operator.innerText
+        operator.classList.add('key__operators-clicked');
+        setTimeout(() => {
+            operator.classList.remove('key__operators-clicked')
+        }, 100);
+    });
+});
+
 // Clear Screen
 
 clear.addEventListener('click', () => {
     displayMax.textContent = "";
-})
+    displayMini.textContent = "";
+});
+
+//  Function Display to Mini Screen
+
+equal.addEventListener('click', () => {
+    displayMini.textContent += displayMax.innerHTML
+    console.log('hi')
+});
+
+
