@@ -1,0 +1,56 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator {}
+
+.caculator--controls {}
+
+.controls__left {}
+
+.control--small {}
+
+.control--close {}
+
+.control--minimize {}
+
+.control--maximize {}
+
+.control__right {}
+
+.control--switch {}
+
+.display--mini {}
+
+.display--max {}
+
+.keys--container {}
+
+.keys {}
+
+.key__controlers {}
+
+.key__numbers {}
+
+.key__controler--clear {}
+
+.key__cotroler--darkmode {}
+
+.key__controler--remainder {}
+
+.key__controler--division {}
+
+.key__controler--multiply {}
+
+.key__controler--subtract {}
+
+.key__controler--addition {}
+
+.key__controler--dot {}
+
+.key__blank {}
+
+.key__controler--equality {}
