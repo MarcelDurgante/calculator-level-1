@@ -9,9 +9,7 @@ let keys = Array.from(key)
 let numbers = Array.from(number)
 let operators = Array.from(operator)
 
-console.log(keys)
-console.log(number)
-console.log(displayMax)
+let history = [];
 
 
 // Print Numbers on Screen
@@ -25,6 +23,8 @@ numbers.forEach((number) => {
         }, 100);
     });
 });
+
+// Print Operators on Screen
 
 operators.forEach((operator) => {
     operator.addEventListener('click', () => {
@@ -43,11 +43,14 @@ clear.addEventListener('click', () => {
     displayMini.textContent = "";
 });
 
-//  Function Display to Mini Screen
+//  Function Display on Mini Screen
 
-equal.addEventListener('click', () => {
-    displayMini.textContent += displayMax.innerHTML
-    console.log('hi')
-});
+let equalBtn = equal.addEventListener('click', printDisplayMini);
+
+function displayToMini () {
+        displayMini.textContent += displayMax.innerHTML;
+        history.push(displayMini.textContent);
+        console.log(history)
+}
 
 
