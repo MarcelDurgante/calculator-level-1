@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Calculator</title>
 </head>
 
@@ -12,11 +13,13 @@
     <div class="calculator">
         <div class="caculator--controls">
             <div class="controls__left">
-                <div class="control--close control--small"></div>
-                <div class="control--minimize control--small"></div>
-                <div class="control--maximize control--small"></div>
+                <div class="control--close control--small">x</div>
+                <div class="control--minimize control--small">-</div>
+                <div class="control--maximize control--small">+</div>
             </div>
-            <div class="control__right control--switch control--small"></div>
+            <div class="switch--dark">
+                <div class="control__right control--switch control--small">T</div>
+            </div>
         </div>
         <div class="display--mini"></div>
         <div class="display--max"></div>
@@ -38,8 +41,8 @@
             <div class="keys key__numbers">3</div>
             <div class="keys key__operators key__operators--addition">+</div>
             <div class="keys key__numbers">0</div>
-            <div class="keys key__operators key__operators--dot">.</div>
-            <div class="keys key__coblank"></div>
+            <div class="keys key__operators--dot">.</div>
+            <div class="keys key__blank"></div>
             <div class="keys key__operators key__operators--equality">=</div>
         </div>
     </div>
