@@ -1,8 +1,29 @@
 html,
 body {
+    width: 100%vw;
+    height: 100%vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
+}
+
+.root {
+    --displays__bg--light-mode: rgba(244, 253, 251, 255);
+    --displays__bg--dark-mode: rgba(33, 43, 65, 255);
+    --displays__inner-content--dark-mode: rgba(88, 180, 136, 255);
+    --displays__inner-content--light-mode: rgba(55, 62, 71, 255);
+    --keys--containter__bg--light-mode: rgba(244, 253, 251, 255);
+    --keys--containter__bg__dark-mode: rgba(45, 56, 80, 255);
+    --keys--operators__bg--light-mode: rgba(244, 253, 251, 255);
+    --keys--operators__bg--dark-mode: rgba(33, 43, 65, 255);
+    --key--operators--dark-mode: rgba(103, 209, 161, 255);
+    --key--operators__equality--light-mode: rgba(105, 213, 164, 255);
+    --key--numbers--light-mode: rgba(76, 84, 91, 255);
+    --key--numbers-dark--mode: rgba(141, 159, 153, 255);
+    --control--close: rgba(234, 79, 74, 255);
+    --control--minimize: rgba(247, 191, 51, 255);
+    --control--maximize: rgba(105, 203, 68, 255);
 }
 
 .calculator {}
