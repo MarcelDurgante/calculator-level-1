@@ -105,11 +105,17 @@
     .display--mini {
         height: 4rem;
         width: 23rem;
+        justify-content: flex-end;
     }
     
     .display--max {
+        display: flex;
+        justify-content: right;
+        align-items: center;
         height: 5rem;
         width: 23rem;
+        font-size: 3rem;
+        color: var(--displays__inner-content--dark-mode)
     }
     
     .keys--container {
@@ -143,7 +149,6 @@
     
     .key__numbers-clicked {
         background-color: var(--displays__bg--light-mode);
-        transition: transform 500ms;
     }
     
     .key__operators--clear {}

@@ -1,9 +1,10 @@
 let key = document.querySelectorAll('.keys');
 let number = document.querySelectorAll('.key__numbers');
 let operator = document.querySelectorAll('.key__operators');
-
+let clear = document.getElementById('clear')
 let equal = document.getElementById('equal');
 let displayMax = document.getElementById('displayMax');
+
 let keys = Array.from(key)
 let numbers = Array.from(number)
 let operators = Array.from(operator)
@@ -21,6 +22,12 @@ numbers.forEach((number) => {
         number.classList.add('key__numbers-clicked')
         setTimeout(() => {
             number.classList.remove('key__numbers-clicked')
-        }, 200);
+        }, 100);
     });
 });
+
+// Clear Screen
+
+clear.addEventListener('click', () => {
+    displayMax.textContent = "";
+})
