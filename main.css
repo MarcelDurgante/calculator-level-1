@@ -25,7 +25,7 @@
         --keys--operators__bg--light-mode: rgba(244, 253, 251, 255);
         --keys--operators__bg--dark-mode: rgba(33, 43, 65, 255);
         --key--operators--dark-mode: rgba(103, 209, 161, 255);
-        --key--operators__equality--light-mode: rgba(105, 213, 164, 255);
+        --key--equal--dark-light-mode: rgba(105, 213, 164, 255);
         --key--numbers--light-mode: rgba(76, 84, 91, 255);
         --key--numbers--dark-mode: rgba(141, 159, 153, 255);
         --control--close: rgba(234, 79, 74, 255);
@@ -141,6 +141,11 @@
         color: var(--key--numbers--dark-mode);
     }
     
+    .key__numbers-clicked {
+        background-color: var(--displays__bg--light-mode);
+        transition: transform 500ms;
+    }
+    
     .key__operators--clear {}
     
     .key__operators--remainder {}
@@ -159,7 +164,7 @@
     
     .key__blank {}
     
-    .key__operators--equality {
+    .key--equal {
         color: var(--displays__bg--dark-mode);
-        background-color: var(--key--operators--dark-mode);
+        background-color: var(--key--equal--dark-light-mode);
     }
