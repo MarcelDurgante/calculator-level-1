@@ -4,13 +4,13 @@ let operator = document.querySelectorAll('.key__operators');
 let clear = document.getElementById('clear')
 let equal = document.getElementById('equal');
 let displayMax = document.getElementById('displayMax');
+let displayMini = document.getElementById('displayMini');
 
 let keys = Array.from(key)
 let numbers = Array.from(number)
 let operators = Array.from(operator)
 
-let history = [];
-
+let log = [];
 
 // Print Numbers on Screen
 
@@ -27,30 +27,68 @@ numbers.forEach((number) => {
 // Print Operators on Screen
 
 operators.forEach((operator) => {
-    operator.addEventListener('click', () => {
-        displayMax.textContent += operator.innerText
+    operator.addEventListener('click', (e) => {
+
+        // click effect on click a key
         operator.classList.add('key__operators-clicked');
         setTimeout(() => {
             operator.classList.remove('key__operators-clicked')
         }, 100);
+
+        //-----PRINT ON SCREEN
+        displayMax.textContent += operator.innerText
+
+
+        //----- CLEAR BUTTON -----
+        if(operator.textContent == 'C') {
+            displayMax.textContent = 0;
+            displayMini.textContent = 0;
+
+        // -------- SHOW ONLY ONE OPERATOR --------
+        } else if (
+            displayMax.textContent.slice(-1) == "+" ||
+            displayMax.textContent.slice(-1) == "-" ||
+            displayMax.textContent.slice(-1) == "*" ||
+            displayMax.textContent.slice(-1) == "/" ||
+            displayMax.textContent.slice(-1) == "%" ||
+            displayMax.textContent.slice(-1) == "+-"
+        ) {} else {
+            displayMax.textContent += e.target.value;
+        }
     });
 });
 
+
 // Clear Screen
 
-clear.addEventListener('click', () => {
-    displayMax.textContent = "";
-    displayMini.textContent = "";
-});
+/* function clearScreen() {
+    clear.addEventListener('click', () => {
+        displayMax.textContent = "";
+        displayMini.textContent = "";
+    })
+};
+clearScreen(); */
 
-//  Function Display on Mini Screen
-
-let equalBtn = equal.addEventListener('click', printDisplayMini);
-
-function displayToMini () {
-        displayMini.textContent += displayMax.innerHTML;
-        history.push(displayMini.textContent);
-        console.log(history)
+// Sum
+function addition(val1, val2) {
+    let res = val1 + val2;
+    displayMax.textContent = res;
 }
 
+//  Equal key functions
 
+let equalBtn = equal.addEventListener('click', equalResult);
+
+function equalResult() {
+    //display Max on Mini Screen
+    displayMini.textContent += (displayMax.textContent);
+    let innerMax = (displayMax.innerText);
+
+    // log operations
+    log.push(innerMax);
+    // do calculus
+    //sum
+
+    console.log(log)
+    // print results
+};

@@ -162,7 +162,10 @@ body {
     background-color: var(--displays__bg--light-mode);
 }
 
-.key__operators--clear {}
+.key__operators--clear {
+    background-color: var(--keys--operators__bg--dark-mode);
+    color: var(--key--operators--dark-mode);
+}
 
 .key__operators--remainder {}
 
@@ -176,6 +179,7 @@ body {
 
 .key__operators--dot {
     color: var(--key--numbers--dark-mode);
+    background-color: var(--keys--containter__bg__dark-mode);
 }
 
 .key__blank {}
